@@ -1,0 +1,295 @@
+   Algoritmo "livraria"
+
+
+   Var
+
+   opcao,opcaod,romance,terror,comedia,familia,suspense,drama : inteiro
+   soma : inteiro
+
+
+   procedimento menu_livros
+   inicio
+
+     escreval("1 - Livros")
+     escreval("2 - Recomendações da Semana")
+     escreval("3 - Calcular Total da Compra")
+     escreval("0 - Sair")
+
+   fimprocedimento
+
+   procedimento menu_preco
+   inicio
+
+     escreval("Total a ser pago :", soma, " R$")
+     escreval
+     escreval("1 - Finalizar")
+     escreval("0 - VOLTAR")
+
+   fimprocedimento
+   
+   procedimento menu_fim
+   inicio
+
+     escreval("Obrigado pela compra")
+     escreval("0 - VOLTAR")
+
+   fimprocedimento
+
+   procedimento menu_categorias
+   inicio
+     escreval("1 - Romance")
+     escreval("2 - Terror")
+     escreval("3 - Comedia")
+     escreval("4 - Familia")
+     escreval("5 - Suspense")
+     escreval("6 - Drama")
+     escreval
+     escreval("0 - VOLTAR")
+   fimprocedimento
+
+   procedimento menu_romances
+   inicio
+     escreval("1 - Crepusculo - 20, R$ ")
+     escreval("2 - Kimi no na wa - 23 R$ ")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_terror
+   inicio
+     escreval("1 - Jason Friday 13th - 22 R$ ")
+     escreval("2 - Lucifer Morningstar - 25 R$ ")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_comedia
+   inicio
+     escreval("1 - Como não ser um Babaca - 18 R$ ")
+     escreval("2 - Teto para Dois - 15 R$ ")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_familia
+   inicio
+     escreval("1 - O Pequeno Príncipe - 13 R$")
+     escreval("2 - Familia é Tudo - 18 R$")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_suspense
+   inicio
+     escreval("1 - O Homem de Giz - 28 R$ ")
+     escreval("2 - A Garota do Lago - 29 R$ ")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_drama
+   inicio
+     escreval("1 - Todas as suas Perfeições - 14 R$ ")
+     escreval("2 - Mil Beijos de Garoto - 12 R$ ")
+     escreval("0 - VOLTAR")
+   fimprocedimento
+   
+   procedimento menu_dasemana
+   inicio
+     escreval("TOPS DA SEMANA")
+     escreval
+     escreval("1 - Crepusculo - 29 R$ ")
+     escreval("2 - Harry potter - COLEÇÃO - 85 R$ ")
+     escreval("3 - Senhor dos aneis - COLEÇÃO - 250 R$ ")
+     escreval
+     escreval("0 - VOLTAR")
+   fimprocedimento
+
+   inicio
+   
+   soma <- 0
+   repita
+        menu_livros
+        escreva("=> ")
+        leia(opcao)
+        limpatela
+        
+        escolha(opcao)
+           caso 1
+              repita
+                 menu_categorias
+                 escreva("=> ")
+                 leia(opcaod)
+                 limpatela
+                  escolha(opcaod)
+                   caso 1
+                   repita
+                        menu_romances
+                        escreva("=> ")
+                        leia(romance)
+                        limpatela
+                           se romance = 1 entao
+                           soma <- 20 + soma
+                           escreval("Você Adicionou Crepusculo ao seu carrinho:")
+                           escreval
+                           senao
+                              se romance = 2 entao
+                              soma <- 23 + soma
+                              escreval("Você Adicionou Kimi no na wa ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate romance = 0
+                   caso 2
+                   repita
+                        menu_terror
+                        escreva("=> ")
+                        leia(terror)
+                        limpatela
+                           se terror = 1 entao
+                           soma <- 22 + soma
+                           escreval("Você Adicionou Jason Friday 13th ao seu carrinho:")
+                           escreval
+                           senao
+                              se terror = 2 entao
+                              soma <- 25 + soma
+                              escreval("Você Adicionou Lucifer Morningstar ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate terror = 0
+                   caso 3
+                   repita
+                        menu_comedia
+                        escreva("=> ")
+                        leia(comedia)
+                        limpatela
+                           se comedia = 1 entao
+                           soma <- 18 + soma
+                           escreval("Você Adicionou Como não ser um Babaca ao seu carrinho:")
+                           escreval
+                           senao
+                              se comedia = 2 entao
+                              soma <- 15 + soma
+                              escreval("Você Adicionou Teto para Dois ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate comedia = 0
+                   caso 4
+                   repita
+                        menu_familia
+                        escreva("=> ")
+                        leia(familia)
+                        limpatela
+                           se familia = 1 entao
+                           soma <- 13 + soma
+                           escreval("Você Adicionou O Pequeno Príncipe ao seu carrinho:")
+                           escreval
+                           senao
+                              se familia = 2 entao
+                              soma <- 18 + soma
+                              escreval("Você Adicionou Familia é Tudo ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate familia = 0
+                   caso 5
+                   repita
+                        menu_suspense
+                        escreva("=> ")
+                        leia(suspense)
+                        limpatela
+                           se suspense = 1 entao
+                           soma <- 28 + soma
+                           escreval("Você Adicionou O Homem de Giz ao seu carrinho:")
+                           escreval
+                           senao
+                              se suspense = 2 entao
+                              soma <- 29 + soma
+                              escreval("Você Adicionou A Garota do Lago ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate suspense = 0
+                   caso 6
+                   repita
+                        menu_drama
+                        escreva("=> ")
+                        leia(drama)
+                        limpatela
+                           se drama = 1 entao
+                           soma <- 14 + soma
+                           escreval("Você Adicionou Todas as suas Perfeições ao seu carrinho:")
+                           escreval
+                           senao
+                              se drama = 2 entao
+                              soma <- 12 + soma
+                              escreval("Você Adicionou Mil Beijos de Garoto ao seu carrinho")
+                              escreval
+                              senao
+                              fimse
+                           fimse
+                   ate drama = 0
+
+                  fimescolha
+              ate opcaod = 0
+
+           caso 2
+              repita
+                 menu_dasemana
+                 escreva("=> ")
+                 leia(opcaod)
+                 limpatela
+                    se opcaod = 1 entao
+                    soma <- 29 + soma
+                    escreval("Você Adicionou Crepusculo ao seu carrinho:")
+                    escreval
+                    senao
+                       se opcaod = 2 entao
+                       soma <- 85 + soma
+                       escreval("Você Adicionou Harry potter - COLEÇÃO ao seu carrinho")
+                       escreval
+                       senao
+                          se opcaod = 3 entao
+                          soma <- 250 + soma
+                          escreval("Você Adicionou Senhor dos aneis - COLEÇÃO ao seu carrinho")
+                          escreval
+                          fimse
+                       fimse
+                    fimse
+              ate opcaod = 0
+           caso 3
+              repita
+                 menu_preco
+                 escreva("=> ")
+                 leia(opcaod)
+                 limpatela
+                 escolha(opcaod)
+                   caso 1
+                   repita
+                        menu_fim
+                        escreva("=> ")
+                        leia(soma)
+                        limpatela
+                      caso 2
+                      repita
+                           menu_preco
+                           escreva("=> ")
+                           leia(opcaod)
+                           limpatela
+
+                      ate opcaod = 0
+                   ate opcaod = 0
+                 fimescolha
+              ate opcaod = 0
+
+           caso 0
+               escreval("Obrigado pela preferencia")
+           outrocaso
+               escreval("OPÇÃO INVALIDA")
+        fimescolha
+   ate opcao = 0
+
+
+Fimalgoritmo
